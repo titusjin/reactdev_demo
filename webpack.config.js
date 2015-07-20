@@ -4,8 +4,8 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
   entry: {
-    webPack1 : './js/app.js',
-    webPack2 : './js/app3.js'
+    webPack1 : './js/app',
+    webPack2 : './js/app3'
   },
   output: {
   	path: './out',

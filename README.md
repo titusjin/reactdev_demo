@@ -1,4 +1,4 @@
-# React with flux developing demo && test
+#Titus jin try to adopt flux in project
 # Flux TodoMVC Example
 
 > An application architecture for React utilizing a unidirectional data flow.

@@ -1,4 +1,4 @@
-#Titus jin try to adopt flux in project
+#Titus jin try to adopt flux in project of developing
 # Flux TodoMVC Example
 
 > An application architecture for React utilizing a unidirectional data flow.

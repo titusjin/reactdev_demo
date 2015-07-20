@@ -13,8 +13,13 @@ module.exports = {
   },
   module: {
   	loaders: [
-  		{test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'}
+  		// {test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+      {test: /\.js$/, loader: 'babel-loader'}
   	]
+  },
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.json', '.coffee'] 
   },
   plugins: [commonsPlugin]
 };

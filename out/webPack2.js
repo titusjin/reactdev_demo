@@ -1,1 +1,246 @@
-webpackJsonp([2],{0:function(e,t,n){"use strict";var r=n(9),o=n(91);r.render(r.createElement(o,null),document.getElementById("example"))},88:function(e,t,n){"use strict";var r=n(18),o={addNewComment:function(e){r.dispatch({eventName:"commentAddNewComment",newItem:{item:e}})}};e.exports=o},91:function(e,t,n){"use strict";var r=n(9),o=n(99),i=n(88),a=r.createClass({displayName:"CommentBox",getInitialState:function(){return o.getAllData()},componentDidMount:function(){o.addChangeListener("commentChange",this._onCommentChange)},componentWillUnmount:function(){o.removeChangeListener("commentChange",this._onCommentChange)},_onCommentChange:function(){this.setState(o.getAllData())},handleCommentSubmit:function(e){i.addNewComment(e)},handleCancelSubmit:function(e){e.preventDefault(),this.state.data.pop(),this.setState({data:this.state.data})},handleReset:function(e){e.preventDefault();var t=this.getInitialState();this.setState(t)},render:function(){return r.createElement("div",{className:"commentBox"},r.createElement("h1",null,"Comments"),r.createElement(s,{data:this.state.data}),r.createElement(l,{onCommentSubmit:this.handleCommentSubmit}),r.createElement("input",{type:"submit",value:"Reset",onClick:this.handleReset}),r.createElement(c,{onCancelSubmit:this.handleCancelSubmit}))}}),s=r.createClass({displayName:"CommentList",removeItem:function(e){o.removeComment(e)},render:function(){var e=this,t=this.props.data.map(function(t){return r.createElement(u,{author:t.author,text:t.text,triggerRemove:e.removeItem})});return r.createElement("div",{className:"commentList"},t)}}),u=r.createClass({displayName:"Comment",handleRemove:function(e){var t=e.target.getAttribute("data-key");this.props.triggerRemove(t)},render:function(){console.log("Comment render....");var e=this.props.author.toString();return r.createElement("div",{className:"comment"},r.createElement("h2",{className:"commentAuthor"},r.createElement("span",{dangerouslySetInnerHTML:{__html:e}})),this.props.text,r.createElement("button",{"data-key":this.props.author,type:"button",onClick:this.handleRemove},"remove"))}}),c=r.createClass({displayName:"CancelForm",render:function(){return r.createElement("form",{className:"commentForm",onSubmit:this.props.onCancelSubmit},r.createElement("input",{type:"submit",value:"remove last comment"}))}}),l=r.createClass({displayName:"CommentForm",handleSubmit:function(e){e.preventDefault();var t=this.refs.author.getDOMNode().value.trim(),n=this.refs.text.getDOMNode().value.trim();this.props.onCommentSubmit({author:t,text:n}),this.refs.author.getDOMNode().value="",this.refs.text.getDOMNode().value=""},render:function(){return r.createElement("form",{className:"commentForm",onSubmit:this.handleSubmit},r.createElement("input",{type:"text",placeholder:"Your name",ref:"author"}),r.createElement("br",null),r.createElement("input",{type:"text",placeholder:"Say something...",ref:"text"}),r.createElement("input",{type:"submit",value:"Post"}))}});e.exports=a},99:function(e,t,n){"use strict";var r=n(18),o=n(33).EventEmitter,i=n(34),a=i({},o.prototype,{model:[{author:"Pete Hunt",text:"This is one comment"},{author:"Jordan Walke",text:"This is *another* comment"}],getAllData:function(){return{data:this.model}},addNewComment:function(e){this.model=this.model.concat([e]),this.emitChange()},removeComment:function(e){for(var t=this.model.length;t--;)if(this.model[t].author==e){this.model.splice(t,1);break}this.emitChange()},emitChange:function(){this.emit("commentChange")},addChangeListener:function(e,t){this.on(e,t)},removeChangeListener:function(e,t){this.removeListener(e,t)}});r.register(function(e){switch(e.eventName){case"commentAddNewComment":a.addNewComment(e.newItem.item),a.emitChange()}}),e.exports=a}});
+webpackJsonp([1],{
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(2);
+	var CommentBox = __webpack_require__(186);
+
+	React.render(React.createElement(CommentBox, null), document.getElementById('example'));
+
+/***/ },
+
+/***/ 186:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(2);
+	var CommentBoxStore = __webpack_require__(187);
+	var CommentBoxAction = __webpack_require__(188);
+
+	var CommentBox = React.createClass({
+	  displayName: 'CommentBox',
+
+	  getInitialState: function getInitialState() {
+	    return CommentBoxStore.getAllData();
+	  },
+	  componentDidMount: function componentDidMount() {
+	    CommentBoxStore.addChangeListener('commentChange', this._onCommentChange);
+	  },
+	  componentWillUnmount: function componentWillUnmount() {
+	    CommentBoxStore.removeChangeListener('commentChange', this._onCommentChange);
+	  },
+	  _onCommentChange: function _onCommentChange() {
+	    this.setState(CommentBoxStore.getAllData());
+	  },
+	  /*
+	    User trigger action  
+	  */
+	  handleCommentSubmit: function handleCommentSubmit(comment) {
+	    // calling action to trigger dispatcher
+	    CommentBoxAction.addNewComment(comment);
+	  },
+	  handleCancelSubmit: function handleCancelSubmit(e) {
+	    e.preventDefault();
+	    this.state.data.pop();
+	    this.setState({ data: this.state.data });
+	  },
+	  handleReset: function handleReset(e) {
+	    e.preventDefault();
+	    var initialState = this.getInitialState();
+	    this.setState(initialState);
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'commentBox' },
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Comments'
+	      ),
+	      React.createElement(CommentList, { data: this.state.data }),
+	      React.createElement(CommentForm, { onCommentSubmit: this.handleCommentSubmit }),
+	      React.createElement('input', { type: 'submit', value: 'Reset', onClick: this.handleReset }),
+	      React.createElement(CancelForm, { onCancelSubmit: this.handleCancelSubmit })
+	    );
+	  }
+	});
+
+	var CommentList = React.createClass({
+	  displayName: 'CommentList',
+
+	  // removeItem: function(selectId){
+	  //   for(var i = this.props.data.length  ; i-- ; ){
+	  //   console.log(this.props.data[i].author);
+
+	  //   if(this.props.data[i].author == selectId){
+	  //       this.props.data.splice(i,1);
+	  //       break;
+	  //     }
+	  //   }
+	  //   this.setState(this.props.data);
+	  // },
+	  removeItem: function removeItem(selectId) {
+	    CommentBoxStore.removeComment(selectId);
+	  },
+	  render: function render() {
+	    var self = this;
+	    var commentNodes = this.props.data.map(function (comment) {
+	      return React.createElement(Comment, { author: comment.author, text: comment.text, triggerRemove: self.removeItem });
+	    });
+	    return React.createElement(
+	      'div',
+	      { className: 'commentList' },
+	      commentNodes
+	    );
+	  }
+	});
+
+	var Comment = React.createClass({
+	  displayName: 'Comment',
+
+	  handleRemove: function handleRemove(e) {
+	    var targetId = e.target.getAttribute('data-key');
+	    this.props.triggerRemove(targetId);
+	  },
+	  render: function render() {
+	    console.log('Comment render....');
+
+	    var rawMarkup = this.props.author.toString();
+	    return React.createElement(
+	      'div',
+	      { className: 'comment' },
+	      React.createElement(
+	        'h2',
+	        { className: 'commentAuthor' },
+	        React.createElement('span', { dangerouslySetInnerHTML: { __html: rawMarkup } })
+	      ),
+	      this.props.text,
+	      React.createElement(
+	        'button',
+	        { 'data-key': this.props.author, type: 'button', onClick: this.handleRemove },
+	        'remove'
+	      )
+	    );
+	  }
+	});
+
+	var CancelForm = React.createClass({
+	  displayName: 'CancelForm',
+
+	  render: function render() {
+	    return React.createElement(
+	      'form',
+	      { className: 'commentForm', onSubmit: this.props.onCancelSubmit },
+	      React.createElement('input', { type: 'submit', value: 'remove last comment' })
+	    );
+	  }
+	});
+
+	var CommentForm = React.createClass({
+	  displayName: 'CommentForm',
+
+	  handleSubmit: function handleSubmit(e) {
+	    e.preventDefault();
+	    var author = this.refs.author.getDOMNode().value.trim();
+	    var text = this.refs.text.getDOMNode().value.trim();
+
+	    this.props.onCommentSubmit({ author: author, text: text });
+
+	    this.refs.author.getDOMNode().value = '';
+	    this.refs.text.getDOMNode().value = '';
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'form',
+	      { className: 'commentForm', onSubmit: this.handleSubmit },
+	      React.createElement('input', { type: 'text', placeholder: 'Your name', ref: 'author' }),
+	      React.createElement('br', null),
+	      React.createElement('input', { type: 'text', placeholder: 'Say something...', ref: 'text' }),
+	      React.createElement('input', { type: 'submit', value: 'Post' })
+	    );
+	  }
+	});
+
+	module.exports = CommentBox;
+
+/***/ },
+
+/***/ 187:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var AppDispatcher = __webpack_require__(159);
+	var EventEmitter = __webpack_require__(163).EventEmitter;
+	var assign = __webpack_require__(164);
+
+	var CommentBoxStore = assign({}, EventEmitter.prototype, {
+		model: [{ author: 'Pete Hunt', text: 'This is one comment' }, { author: 'Jordan Walke', text: 'This is *another* comment' }],
+		getAllData: function getAllData() {
+			return { data: this.model };
+		},
+		addNewComment: function addNewComment(comment) {
+			this.model = this.model.concat([comment]);
+			this.emitChange();
+		},
+		removeComment: function removeComment(selectId) {
+			for (var i = this.model.length; i--;) {
+				if (this.model[i].author == selectId) {
+					this.model.splice(i, 1);
+					break;
+				}
+			}
+			this.emitChange();
+		},
+		emitChange: function emitChange() {
+			this.emit('commentChange');
+		},
+		addChangeListener: function addChangeListener(eventName, callback) {
+			this.on(eventName, callback);
+		},
+		removeChangeListener: function removeChangeListener(eventName, callback) {
+			this.removeListener(eventName, callback);
+		}
+	});
+
+	AppDispatcher.register(function (payload) {
+		switch (payload.eventName) {
+			case 'commentAddNewComment':
+				CommentBoxStore.addNewComment(payload.newItem.item);
+
+				//trigger view update after model is updated
+				CommentBoxStore.emitChange();
+				break;
+		}
+	});
+
+	module.exports = CommentBoxStore;
+
+/***/ },
+
+/***/ 188:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var AppDispatcher = __webpack_require__(159);
+
+	var CommentBoxAction = {
+	  addNewComment: function addNewComment(comment) {
+	    AppDispatcher.dispatch({
+	      eventName: 'commentAddNewComment',
+	      newItem: { item: comment }
+	    });
+	  }
+	};
+
+	module.exports = CommentBoxAction;
+
+/***/ }
+
+});

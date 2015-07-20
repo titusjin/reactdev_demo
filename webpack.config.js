@@ -9,16 +9,18 @@ module.exports = {
   },
   output: {
   	path: './out',
-    filename: '[name].js'      
+    filename: '[name].js'    
   },
   module: {
   	loaders: [
   		// {test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
-      {test: /\.js$/, loader: 'babel-loader'}
+      {test: /\.js$/, loader: 'babel-loader'},
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      { test: /\.png$/, loader: "url-loader" }
   	]
   },
   resolve: {
-    // you can now require('file') instead of require('file.coffee')
+    // you can now require('file') instead of require('file.coffee') or require('file.js')...etc.
     extensions: ['', '.js', '.json', '.coffee'] 
   },
   plugins: [commonsPlugin]

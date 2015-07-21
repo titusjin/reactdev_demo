@@ -13,6 +13,7 @@ var TodoApp = require('./components/TodoApp.react');
 var SecondaryMenu = require('./components/SecondaryMenu.react');
 var Banner = require('./components/Banner.react');
 
+// This is where we have to put our css file after using style-loader!css-loader with webpack
 require('../todomvc-common/base.css');
 require('../css/app.css');
 

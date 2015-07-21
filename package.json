@@ -24,9 +24,11 @@
     "css-loader": "^0.15.5",
     "url-loader": "^0.5.6"
   },
+  "_comment": "This the descroption of scripts we used here.  In developing we can just type 'npm run build'. While deploying to production we can use 'npm run buildp'",
   "scripts": {
     "start": "wathcify -o js/bundle.js -v -d js/app.js",
-    "build": "webpack -p --display-error-details",
+    "build": "webpack --display-error-details",
+    "buildp": "webpack -p",
     "test": "jest"
   },
   "browserify": {

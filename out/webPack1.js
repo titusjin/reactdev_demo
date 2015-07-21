@@ -20,6 +20,7 @@ webpackJsonp([0],{
 	var SecondaryMenu = __webpack_require__(176);
 	var Banner = __webpack_require__(1);
 
+	// This is where we have to put our css file after using style-loader!css-loader with webpack
 	__webpack_require__(179);
 	__webpack_require__(184);
 

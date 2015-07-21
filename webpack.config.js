@@ -7,6 +7,7 @@ module.exports = {
     webPack1 : './js/app',
     webPack2 : './js/app3'
   },
+  // for multi entries we can use [name] for different bundle
   output: {
   	path: './out',
     filename: '[name].js'    

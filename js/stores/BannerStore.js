@@ -21,14 +21,18 @@ var BannerStore = assign({},EventEmitter.prototype,{
   	}
 });
 
+
+
+
 AppDispatcher.register( function( payload ) {
     switch( payload.eventName ) {
-        case 'bannerAdd':
-            BannerStore.addContent(payload.newItem.item);
-            
-            //trigger view update after model is updated
-            BannerStore.emitChange();
-            break;
+      case 'bannerAdd':
+          BannerStore.addContent(payload.newItem.item);
+          console.log(payload.newItem.refDispatcher == AppDispatcher);
+          
+          //trigger view update after model is updated
+          BannerStore.emitChange();
+          break;
     }
 }); 
 

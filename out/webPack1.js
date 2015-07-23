@@ -111,6 +111,7 @@ webpackJsonp([0],{
 	  switch (payload.eventName) {
 	    case 'bannerAdd':
 	      BannerStore.addContent(payload.newItem.item);
+	      console.log(payload.newItem.refDispatcher == AppDispatcher);
 
 	      //trigger view update after model is updated
 	      BannerStore.emitChange();
@@ -1236,7 +1237,9 @@ webpackJsonp([0],{
 	  sendMessage: function sendMessage(data) {
 	    AppDispatcher.dispatch({
 	      eventName: 'bannerAdd',
-	      newItem: { item: data }
+	      newItem: { item: data,
+	        refDispatcher: AppDispatcher
+	      }
 	    });
 	  }
 	};

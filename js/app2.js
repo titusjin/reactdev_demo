@@ -11,7 +11,6 @@ var React = require('react');
 
 var TodoApp = require('./components/TodoApp.react');
 var SecondaryMenu = require('./components/SecondaryMenu.react');
-var Banner = require('./components/Banner.react');
 
 React.render(
   <TodoApp />,

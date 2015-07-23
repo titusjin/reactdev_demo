@@ -7,13 +7,15 @@ var SecondaryMenuAction = {
 	changeSecondMenu : function(selected){
 		AppDispatcher.dispatch({
         	eventName: TodoConstants.SECONDMENU_TRIGGER,
-        	newItem: { item: selected }
+        	newItem: { item: selected}
     	});		
 	},
 	sendMessage: function(data){
 		AppDispatcher.dispatch({
         	eventName: 'bannerAdd',
-        	newItem: { item: data }
+        	newItem: {	item: data ,
+						refDispatcher : AppDispatcher
+        			}
     	});			
 	}
 }

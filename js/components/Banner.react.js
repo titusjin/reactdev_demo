@@ -19,9 +19,7 @@ var Banner = React.createClass({
 			return <div><span style={{color: 'red'}}>{node}</span></div>
 		});
 		return(
-			<div>
-				{data}
-			</div>
+			<div>{data}</div>
 		);
 	}
 });

@@ -6,3 +6,6 @@ We have several dfferent components in the demo combined with official flux-Todo
 ## Building project with npm + webpack
 In package.json we have webpack with the version higher than 1.8.1
 jsx-loader with the version higher than 0.13.2
+
+
+# now we change to use webpack with babel.js instead of jsx-loader and this folder will keep involving

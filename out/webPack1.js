@@ -70,7 +70,12 @@ webpackJsonp([0],{
 			return React.createElement(
 				'div',
 				null,
-				data
+				React.createElement(
+					'div',
+					null,
+					data
+				),
+				React.createElement('input', { type: 'file' })
 			);
 		}
 	});

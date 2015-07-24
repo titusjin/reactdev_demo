@@ -31,6 +31,11 @@ module.exports = {
     // you can now require('fileName') instead of require('file.coffee') or require('file.js')...etc.
     extensions: ['', '.js', '.json', '.coffee'] 
   },
+  externals: {
+      //don't bundle the 'react' npm package with our bundle.js
+      //but get it from a global 'React' variable
+      'react': 'React'
+  },
   // commonsPlugin can abstract common js code out of ur entries
   plugins: [commonsPlugin]
 };

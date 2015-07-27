@@ -14,17 +14,22 @@ module.exports = {
   },
   module: {
   	loaders: [
-      // To transfer jsx into pure js, we can use jsx-loader or babel-loader
-  		// {test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+/*    To transfer jsx into pure js, we can use jsx-loader or babel-loader
+  		{test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+*/    
       {test: /\.js$/, loader: 'babel-loader'},
 
-      // To make the css as one js module that can be import by using require(xxx.css) 
-      // we need style-loader pipe with css-loader with the symbol "!"
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+/*    To make the css as one js module that can be import by using require(xxx.css) 
+      we need style-loader pipe with css-loader with the symbol "!"
+*/      
+      {test: /\.css$/, loaders:  ["style", "css"]},
 
-      // url-loader will taking care of the png/jpg...etc files inside ur css file
-      // For better understanding of the url-loader, visit the official site: https://github.com/webpack/url-loader
-      {test: /\.png$/, loader: "url-loader"}
+/*    url-loader will taking care of the png/jpg...etc files inside ur css file
+      according to the limit of data-url , we add the limit 8192       
+      For better understanding of the url-loader, visit the official site: https://github.com/webpack/url-loader
+*/      
+      {test: /\.jpg$/, loader: "url-loader?limit=8192"},
+      {test: /\.png$/, loader: "file?name=images/[hash].[ext]"}
   	]
   },
   resolve: {

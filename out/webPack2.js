@@ -6,20 +6,20 @@ webpackJsonp([1],{
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var CommentBox = __webpack_require__(186);
+	var CommentBox = __webpack_require__(34);
 
 	React.render(React.createElement(CommentBox, null), document.getElementById('example'));
 
 /***/ },
 
-/***/ 186:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var CommentBoxStore = __webpack_require__(187);
-	var CommentBoxAction = __webpack_require__(188);
+	var CommentBoxStore = __webpack_require__(35);
+	var CommentBoxAction = __webpack_require__(36);
 
 	var CommentBox = React.createClass({
 	  displayName: 'CommentBox',
@@ -170,14 +170,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 187:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
-	var EventEmitter = __webpack_require__(163).EventEmitter;
-	var assign = __webpack_require__(164);
+	var AppDispatcher = __webpack_require__(4);
+	var EventEmitter = __webpack_require__(8).EventEmitter;
+	var assign = __webpack_require__(9);
 
 	var CommentBoxStore = assign({}, EventEmitter.prototype, {
 		model: [{ author: 'Pete Hunt', text: 'This is one comment' }, { author: 'Jordan Walke', text: 'This is *another* comment' }],
@@ -223,12 +223,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 188:
+/***/ 36:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
+	var AppDispatcher = __webpack_require__(4);
 
 	var CommentBoxAction = {
 	  addNewComment: function addNewComment(comment) {

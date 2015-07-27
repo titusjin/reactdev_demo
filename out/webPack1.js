@@ -1,6 +1,5 @@
-webpackJsonp([0],{
-
-/***/ 0:
+webpackJsonp([0],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16,13 +15,13 @@ webpackJsonp([0],{
 
 	var React = __webpack_require__(2);
 
-	var TodoApp = __webpack_require__(165);
-	var SecondaryMenu = __webpack_require__(176);
+	var TodoApp = __webpack_require__(10);
+	var SecondaryMenu = __webpack_require__(24);
 	var Banner = __webpack_require__(1);
 
 	// This is where we have to put our css file after using style-loader!css-loader with webpack
-	__webpack_require__(179);
-	__webpack_require__(184);
+	__webpack_require__(27);
+	__webpack_require__(32);
 
 	React.render(React.createElement(TodoApp, null), document.getElementById('todoapp'));
 
@@ -31,14 +30,13 @@ webpackJsonp([0],{
 	React.render(React.createElement(Banner, null), document.getElementById('banner'));
 
 /***/ },
-
-/***/ 1:
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var BannerStore = __webpack_require__(158);
+	var BannerStore = __webpack_require__(3);
 
 	var Banner = React.createClass({
 		displayName: 'Banner',
@@ -83,15 +81,15 @@ webpackJsonp([0],{
 	module.exports = Banner;
 
 /***/ },
-
-/***/ 158:
+/* 2 */,
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
-	var EventEmitter = __webpack_require__(163).EventEmitter;
-	var assign = __webpack_require__(164);
+	var AppDispatcher = __webpack_require__(4);
+	var EventEmitter = __webpack_require__(8).EventEmitter;
+	var assign = __webpack_require__(9);
 
 	var BannerStore = assign({}, EventEmitter.prototype, {
 	  model: { content: [] },
@@ -127,8 +125,13 @@ webpackJsonp([0],{
 	module.exports = BannerStore;
 
 /***/ },
-
-/***/ 165:
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -148,11 +151,11 @@ webpackJsonp([0],{
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var Footer = __webpack_require__(166);
-	var Header = __webpack_require__(170);
-	var MainSection = __webpack_require__(172);
+	var Footer = __webpack_require__(11);
+	var Header = __webpack_require__(15);
+	var MainSection = __webpack_require__(17);
 
-	var TodoStore = __webpack_require__(175);
+	var TodoStore = __webpack_require__(23);
 
 	/**
 	 * Retrieve the current TODO data from the TodoStore
@@ -206,8 +209,7 @@ webpackJsonp([0],{
 	module.exports = TodoApp;
 
 /***/ },
-
-/***/ 166:
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -223,7 +225,7 @@ webpackJsonp([0],{
 
 	var React = __webpack_require__(2);
 	var ReactPropTypes = React.PropTypes;
-	var TodoActions = __webpack_require__(167);
+	var TodoActions = __webpack_require__(12);
 
 	var Footer = React.createClass({
 	  displayName: 'Footer',
@@ -297,8 +299,7 @@ webpackJsonp([0],{
 	module.exports = Footer;
 
 /***/ },
-
-/***/ 167:
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -314,8 +315,8 @@ webpackJsonp([0],{
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
-	var TodoConstants = __webpack_require__(168);
+	var AppDispatcher = __webpack_require__(4);
+	var TodoConstants = __webpack_require__(13);
 
 	var TodoActions = {
 
@@ -391,8 +392,7 @@ webpackJsonp([0],{
 	module.exports = TodoActions;
 
 /***/ },
-
-/***/ 168:
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -408,7 +408,7 @@ webpackJsonp([0],{
 
 	'use strict';
 
-	var keyMirror = __webpack_require__(169);
+	var keyMirror = __webpack_require__(14);
 
 	module.exports = keyMirror({
 	  TODO_CREATE: null,
@@ -422,8 +422,7 @@ webpackJsonp([0],{
 	});
 
 /***/ },
-
-/***/ 169:
+/* 14 */
 /***/ function(module, exports) {
 
 	/**
@@ -481,8 +480,7 @@ webpackJsonp([0],{
 	module.exports = keyMirror;
 
 /***/ },
-
-/***/ 170:
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -497,8 +495,8 @@ webpackJsonp([0],{
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var TodoActions = __webpack_require__(167);
-	var TodoTextInput = __webpack_require__(171);
+	var TodoActions = __webpack_require__(12);
+	var TodoTextInput = __webpack_require__(16);
 
 	var Header = React.createClass({
 	  displayName: 'Header',
@@ -540,8 +538,7 @@ webpackJsonp([0],{
 	module.exports = Header;
 
 /***/ },
-
-/***/ 171:
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -629,8 +626,7 @@ webpackJsonp([0],{
 	module.exports = TodoTextInput;
 
 /***/ },
-
-/***/ 172:
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -646,8 +642,8 @@ webpackJsonp([0],{
 
 	var React = __webpack_require__(2);
 	var ReactPropTypes = React.PropTypes;
-	var TodoActions = __webpack_require__(167);
-	var TodoItem = __webpack_require__(173);
+	var TodoActions = __webpack_require__(12);
+	var TodoItem = __webpack_require__(18);
 
 	var MainSection = React.createClass({
 	  displayName: 'MainSection',
@@ -708,8 +704,7 @@ webpackJsonp([0],{
 	module.exports = MainSection;
 
 /***/ },
-
-/***/ 173:
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -725,10 +720,10 @@ webpackJsonp([0],{
 
 	var React = __webpack_require__(2);
 	var ReactPropTypes = React.PropTypes;
-	var TodoActions = __webpack_require__(167);
-	var TodoTextInput = __webpack_require__(171);
+	var TodoActions = __webpack_require__(12);
+	var TodoTextInput = __webpack_require__(16);
 
-	var cx = __webpack_require__(174);
+	var cx = __webpack_require__(19);
 
 	var TodoItem = React.createClass({
 	  displayName: 'TodoItem',
@@ -819,8 +814,7 @@ webpackJsonp([0],{
 	module.exports = TodoItem;
 
 /***/ },
-
-/***/ 174:
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -851,7 +845,7 @@ webpackJsonp([0],{
 	 */
 
 	"use strict";
-	var warning = __webpack_require__(16);
+	var warning = __webpack_require__(21);
 
 	var warned = false;
 
@@ -871,11 +865,216 @@ webpackJsonp([0],{
 	}
 
 	module.exports = cx;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
 
 /***/ },
+/* 20 */
+/***/ function(module, exports) {
 
-/***/ 175:
+	// shim for using process in browser
+
+	'use strict';
+
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+
+	function cleanUpNextTick() {
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = setTimeout(cleanUpNextTick);
+	    draining = true;
+
+	    var len = queue.length;
+	    while (len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            currentQueue[queueIndex].run();
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    clearTimeout(timeout);
+	}
+
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+
+	function noop() {}
+
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+
+	// TODO(shtylman)
+	process.cwd = function () {
+	    return '/';
+	};
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function () {
+	    return 0;
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule warning
+	 */
+
+	"use strict";
+
+	var emptyFunction = __webpack_require__(22);
+
+	/**
+	 * Similar to invariant but only logs a warning if the condition is not met.
+	 * This can be used to log issues in development environments in critical
+	 * paths. Removing the logging code for production environments will keep the
+	 * same logic and follow the same code paths.
+	 */
+
+	var warning = emptyFunction;
+
+	if ("production" !== process.env.NODE_ENV) {
+	  warning = function (condition, format) {
+	    for (var args = [], $__0 = 2, $__1 = arguments.length; $__0 < $__1; $__0++) args.push(arguments[$__0]);
+	    if (format === undefined) {
+	      throw new Error("`warning(condition, format, ...args)` requires a warning " + "message argument");
+	    }
+
+	    if (format.length < 10 || /^[s\W]*$/.test(format)) {
+	      throw new Error("The warning format should be able to uniquely identify this " + "warning. Please, use a more descriptive format than: " + format);
+	    }
+
+	    if (format.indexOf("Failed Composite propType: ") === 0) {
+	      return; // Ignore CompositeComponent proptype check.
+	    }
+
+	    if (!condition) {
+	      var argIndex = 0;
+	      var message = "Warning: " + format.replace(/%s/g, function () {
+	        return args[argIndex++];
+	      });
+	      console.warn(message);
+	      try {
+	        // --- Welcome to debugging React ---
+	        // This error was thrown as a convenience so that you can use this stack
+	        // to find the callsite that caused this warning to fire.
+	        throw new Error(message);
+	      } catch (x) {}
+	    }
+	  };
+	}
+
+	module.exports = warning;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule emptyFunction
+	 */
+
+	"use strict";
+
+	function makeEmptyFunction(arg) {
+	  return function () {
+	    return arg;
+	  };
+	}
+
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	function emptyFunction() {}
+
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function () {
+	  return this;
+	};
+	emptyFunction.thatReturnsArgument = function (arg) {
+	  return arg;
+	};
+
+	module.exports = emptyFunction;
+
+/***/ },
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -891,10 +1090,10 @@ webpackJsonp([0],{
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
-	var EventEmitter = __webpack_require__(163).EventEmitter;
-	var TodoConstants = __webpack_require__(168);
-	var assign = __webpack_require__(164);
+	var AppDispatcher = __webpack_require__(4);
+	var EventEmitter = __webpack_require__(8).EventEmitter;
+	var TodoConstants = __webpack_require__(13);
+	var assign = __webpack_require__(9);
 
 	var CHANGE_EVENT = 'change';
 
@@ -1058,15 +1257,14 @@ webpackJsonp([0],{
 	module.exports = TodoStore;
 
 /***/ },
-
-/***/ 176:
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var SecondaryMenuStore = __webpack_require__(177);
-	var SecondaryMenuAction = __webpack_require__(178);
+	var SecondaryMenuStore = __webpack_require__(25);
+	var SecondaryMenuAction = __webpack_require__(26);
 
 	var SecondaryMenu = React.createClass({
 		displayName: 'SecondaryMenu',
@@ -1150,16 +1348,15 @@ webpackJsonp([0],{
 	module.exports = SecondaryMenu;
 
 /***/ },
-
-/***/ 177:
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var AppDispatcher = __webpack_require__(159);
-	var EventEmitter = __webpack_require__(163).EventEmitter;
-	var assign = __webpack_require__(164);
-	var TodoConstants = __webpack_require__(168);
+	var AppDispatcher = __webpack_require__(4);
+	var EventEmitter = __webpack_require__(8).EventEmitter;
+	var assign = __webpack_require__(9);
+	var TodoConstants = __webpack_require__(13);
 
 	var data = {
 	  first: ['Apple', 'HTC', 'Samsung'],
@@ -1221,16 +1418,15 @@ webpackJsonp([0],{
 	module.exports = SecondaryMenuStore;
 
 /***/ },
-
-/***/ 178:
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	'use strick';
 
-	var AppDispatcher = __webpack_require__(159);
-	var TodoConstants = __webpack_require__(168);
+	var AppDispatcher = __webpack_require__(4);
+	var TodoConstants = __webpack_require__(13);
 
 	var SecondaryMenuAction = {
 	  changeSecondMenu: function changeSecondMenu(selected) {
@@ -1252,17 +1448,16 @@ webpackJsonp([0],{
 	module.exports = SecondaryMenuAction;
 
 /***/ },
-
-/***/ 179:
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(180);
+	var content = __webpack_require__(28);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(183)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1279,23 +1474,21 @@ webpackJsonp([0],{
 	}
 
 /***/ },
-
-/***/ 180:
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(181)();
+	exports = module.exports = __webpack_require__(29)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "html,\r\nbody {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n}\r\n\r\nbutton {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tborder: 0;\r\n\tbackground: none;\r\n\tfont-size: 100%;\r\n\tvertical-align: baseline;\r\n\tfont-family: inherit;\r\n\tcolor: inherit;\r\n\t-webkit-appearance: none;\r\n\t-ms-appearance: none;\r\n\t-o-appearance: none;\r\n\tappearance: none;\r\n}\r\n\r\nbody {\r\n\tfont: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n\tline-height: 1.4em;\r\n\tbackground: #eaeaea url(" + __webpack_require__(182) + ");\r\n\tcolor: #4d4d4d;\r\n\twidth: 550px;\r\n\tmargin: 0 auto;\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-font-smoothing: antialiased;\r\n\t-ms-font-smoothing: antialiased;\r\n\t-o-font-smoothing: antialiased;\r\n\tfont-smoothing: antialiased;\r\n}\r\n\r\nbutton,\r\ninput[type=\"checkbox\"] {\r\n  outline: none;\r\n}\r\n\r\n#todoapp {\r\n\tbackground: #fff;\r\n\tbackground: rgba(255, 255, 255, 0.9);\r\n\tmargin: 130px 0 40px 0;\r\n\tborder: 1px solid #ccc;\r\n\tposition: relative;\r\n\tborder-top-left-radius: 2px;\r\n\tborder-top-right-radius: 2px;\r\n\tbox-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),\r\n\t\t\t\t0 25px 50px 0 rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n#todoapp:before {\r\n\tcontent: '';\r\n\tborder-left: 1px solid #f5d6d6;\r\n\tborder-right: 1px solid #f5d6d6;\r\n\twidth: 2px;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 40px;\r\n\theight: 100%;\r\n}\r\n\r\n#todoapp input::-webkit-input-placeholder {\r\n\tfont-style: italic;\r\n}\r\n\r\n#todoapp input::-moz-placeholder {\r\n\tfont-style: italic;\r\n\tcolor: #a9a9a9;\r\n}\r\n\r\n#todoapp h1 {\r\n\tposition: absolute;\r\n\ttop: -120px;\r\n\twidth: 100%;\r\n\tfont-size: 70px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tcolor: #b3b3b3;\r\n\tcolor: rgba(255, 255, 255, 0.3);\r\n\ttext-shadow: -1px -1px rgba(0, 0, 0, 0.2);\r\n\t-webkit-text-rendering: optimizeLegibility;\r\n\t-moz-text-rendering: optimizeLegibility;\r\n\t-ms-text-rendering: optimizeLegibility;\r\n\t-o-text-rendering: optimizeLegibility;\r\n\ttext-rendering: optimizeLegibility;\r\n}\r\n\r\n#header {\r\n\tpadding-top: 15px;\r\n\tborder-radius: inherit;\r\n}\r\n\r\n#header:before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tright: 0;\r\n\tleft: 0;\r\n\theight: 15px;\r\n\tz-index: 2;\r\n\tborder-bottom: 1px solid #6c615c;\r\n\tbackground: #8d7d77;\r\n\tbackground: -webkit-gradient(linear, left top, left bottom, from(rgba(132, 110, 100, 0.8)),to(rgba(101, 84, 76, 0.8)));\r\n\tbackground: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));\r\n\tbackground: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));\r\n\tfilter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');\r\n\tborder-top-left-radius: 1px;\r\n\tborder-top-right-radius: 1px;\r\n}\r\n\r\n#new-todo,\r\n.edit {\r\n\tposition: relative;\r\n\tmargin: 0;\r\n\twidth: 100%;\r\n\tfont-size: 24px;\r\n\tfont-family: inherit;\r\n\tline-height: 1.4em;\r\n\tborder: 0;\r\n\toutline: none;\r\n\tcolor: inherit;\r\n\tpadding: 6px;\r\n\tborder: 1px solid #999;\r\n\tbox-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);\r\n\t-moz-box-sizing: border-box;\r\n\t-ms-box-sizing: border-box;\r\n\t-o-box-sizing: border-box;\r\n\tbox-sizing: border-box;\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-font-smoothing: antialiased;\r\n\t-ms-font-smoothing: antialiased;\r\n\t-o-font-smoothing: antialiased;\r\n\tfont-smoothing: antialiased;\r\n}\r\n\r\n#new-todo {\r\n\tpadding: 16px 16px 16px 60px;\r\n\tborder: none;\r\n\tbackground: rgba(0, 0, 0, 0.02);\r\n\tz-index: 2;\r\n\tbox-shadow: none;\r\n}\r\n\r\n#main {\r\n\tposition: relative;\r\n\tz-index: 2;\r\n\tborder-top: 1px dotted #adadad;\r\n}\r\n\r\nlabel[for='toggle-all'] {\r\n\tdisplay: none;\r\n}\r\n\r\n#toggle-all {\r\n\tposition: absolute;\r\n\ttop: -42px;\r\n\tleft: -4px;\r\n\twidth: 40px;\r\n\ttext-align: center;\r\n\t/* Mobile Safari */\r\n\tborder: none;\r\n}\r\n\r\n#toggle-all:before {\r\n\tcontent: '\\BB';\r\n\tfont-size: 28px;\r\n\tcolor: #d9d9d9;\r\n\tpadding: 0 25px 7px;\r\n}\r\n\r\n#toggle-all:checked:before {\r\n\tcolor: #737373;\r\n}\r\n\r\n#todo-list {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n}\r\n\r\n#todo-list li {\r\n\tposition: relative;\r\n\tfont-size: 24px;\r\n\tborder-bottom: 1px dotted #ccc;\r\n}\r\n\r\n#todo-list li:last-child {\r\n\tborder-bottom: none;\r\n}\r\n\r\n#todo-list li.editing {\r\n\tborder-bottom: none;\r\n\tpadding: 0;\r\n}\r\n\r\n#todo-list li.editing .edit {\r\n\tdisplay: block;\r\n\twidth: 506px;\r\n\tpadding: 13px 17px 12px 17px;\r\n\tmargin: 0 0 0 43px;\r\n}\r\n\r\n#todo-list li.editing .view {\r\n\tdisplay: none;\r\n}\r\n\r\n#todo-list li .toggle {\r\n\ttext-align: center;\r\n\twidth: 40px;\r\n\t/* auto, since non-WebKit browsers doesn't support input styling */\r\n\theight: auto;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\tmargin: auto 0;\r\n\t/* Mobile Safari */\r\n\tborder: none;\r\n\t-webkit-appearance: none;\r\n\t-ms-appearance: none;\r\n\t-o-appearance: none;\r\n\tappearance: none;\r\n}\r\n\r\n#todo-list li .toggle:after {\r\n\tcontent: '\\2714';\r\n\t/* 40 + a couple of pixels visual adjustment */\r\n\tline-height: 43px;\r\n\tfont-size: 20px;\r\n\tcolor: #d9d9d9;\r\n\ttext-shadow: 0 -1px 0 #bfbfbf;\r\n}\r\n\r\n#todo-list li .toggle:checked:after {\r\n\tcolor: #85ada7;\r\n\ttext-shadow: 0 1px 0 #669991;\r\n\tbottom: 1px;\r\n\tposition: relative;\r\n}\r\n\r\n#todo-list li label {\r\n\twhite-space: pre;\r\n\tword-break: break-word;\r\n\tpadding: 15px 60px 15px 15px;\r\n\tmargin-left: 45px;\r\n\tdisplay: block;\r\n\tline-height: 1.2;\r\n\t-webkit-transition: color 0.4s;\r\n\ttransition: color 0.4s;\r\n}\r\n\r\n#todo-list li.completed label {\r\n\tcolor: #a9a9a9;\r\n\ttext-decoration: line-through;\r\n}\r\n\r\n#todo-list li .destroy {\r\n\tdisplay: none;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tright: 10px;\r\n\tbottom: 0;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: auto 0;\r\n\tfont-size: 22px;\r\n\tcolor: #a88a8a;\r\n\t-webkit-transition: all 0.2s;\r\n\ttransition: all 0.2s;\r\n}\r\n\r\n#todo-list li .destroy:hover {\r\n\ttext-shadow: 0 0 1px #000,\r\n\t\t\t\t 0 0 10px rgba(199, 107, 107, 0.8);\r\n\t-webkit-transform: scale(1.3);\r\n\t-ms-transform: scale(1.3);\r\n\ttransform: scale(1.3);\r\n}\r\n\r\n#todo-list li .destroy:after {\r\n\tcontent: '\\2716';\r\n}\r\n\r\n#todo-list li:hover .destroy {\r\n\tdisplay: block;\r\n}\r\n\r\n#todo-list li .edit {\r\n\tdisplay: none;\r\n}\r\n\r\n#todo-list li.editing:last-child {\r\n\tmargin-bottom: -1px;\r\n}\r\n\r\n#footer {\r\n\tcolor: #777;\r\n\tpadding: 0 15px;\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tbottom: -31px;\r\n\tleft: 0;\r\n\theight: 20px;\r\n\tz-index: 1;\r\n\ttext-align: center;\r\n}\r\n\r\n#footer:before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tbottom: 31px;\r\n\tleft: 0;\r\n\theight: 50px;\r\n\tz-index: -1;\r\n\tbox-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),\r\n\t\t\t\t0 6px 0 -3px rgba(255, 255, 255, 0.8),\r\n\t\t\t\t0 7px 1px -3px rgba(0, 0, 0, 0.3),\r\n\t\t\t\t0 43px 0 -6px rgba(255, 255, 255, 0.8),\r\n\t\t\t\t0 44px 2px -6px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n#todo-count {\r\n\tfloat: left;\r\n\ttext-align: left;\r\n}\r\n\r\n#filters {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tleft: 0;\r\n}\r\n\r\n#filters li {\r\n\tdisplay: inline;\r\n}\r\n\r\n#filters li a {\r\n\tcolor: #83756f;\r\n\tmargin: 2px;\r\n\ttext-decoration: none;\r\n}\r\n\r\n#filters li a.selected {\r\n\tfont-weight: bold;\r\n}\r\n\r\n#clear-completed {\r\n\tfloat: right;\r\n\tposition: relative;\r\n\tline-height: 20px;\r\n\ttext-decoration: none;\r\n\tbackground: rgba(0, 0, 0, 0.1);\r\n\tfont-size: 11px;\r\n\tpadding: 0 10px;\r\n\tborder-radius: 3px;\r\n\tbox-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n#clear-completed:hover {\r\n\tbackground: rgba(0, 0, 0, 0.15);\r\n\tbox-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n#info {\r\n\tmargin: 65px auto 0;\r\n\tcolor: #a6a6a6;\r\n\tfont-size: 12px;\r\n\ttext-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);\r\n\ttext-align: center;\r\n}\r\n\r\n#info a {\r\n\tcolor: inherit;\r\n}\r\n\r\n/*\r\n\tHack to remove background from Mobile Safari.\r\n\tCan't use it globally since it destroys checkboxes in Firefox and Opera\r\n*/\r\n\r\n@media screen and (-webkit-min-device-pixel-ratio:0) {\r\n\t#toggle-all,\r\n\t#todo-list li .toggle {\r\n\t\tbackground: none;\r\n\t}\r\n\r\n\t#todo-list li .toggle {\r\n\t\theight: 40px;\r\n\t}\r\n\r\n\t#toggle-all {\r\n\t\ttop: -56px;\r\n\t\tleft: -15px;\r\n\t\twidth: 65px;\r\n\t\theight: 41px;\r\n\t\t-webkit-transform: rotate(90deg);\r\n\t\t-ms-transform: rotate(90deg);\r\n\t\ttransform: rotate(90deg);\r\n\t\t-webkit-appearance: none;\r\n\t\tappearance: none;\r\n\t}\r\n}\r\n\r\n.hidden {\r\n\tdisplay: none;\r\n}\r\n\r\nhr {\r\n\tmargin: 20px 0;\r\n\tborder: 0;\r\n\tborder-top: 1px dashed #C5C5C5;\r\n\tborder-bottom: 1px dashed #F7F7F7;\r\n}\r\n\r\n.learn a {\r\n\tfont-weight: normal;\r\n\ttext-decoration: none;\r\n\tcolor: #b83f45;\r\n}\r\n\r\n.learn a:hover {\r\n\ttext-decoration: underline;\r\n\tcolor: #787e7e;\r\n}\r\n\r\n.learn h3,\r\n.learn h4,\r\n.learn h5 {\r\n\tmargin: 10px 0;\r\n\tfont-weight: 500;\r\n\tline-height: 1.2;\r\n\tcolor: #000;\r\n}\r\n\r\n.learn h3 {\r\n\tfont-size: 24px;\r\n}\r\n\r\n.learn h4 {\r\n\tfont-size: 18px;\r\n}\r\n\r\n.learn h5 {\r\n\tmargin-bottom: 0;\r\n\tfont-size: 14px;\r\n}\r\n\r\n.learn ul {\r\n\tpadding: 0;\r\n\tmargin: 0 0 30px 25px;\r\n}\r\n\r\n.learn li {\r\n\tline-height: 20px;\r\n}\r\n\r\n.learn p {\r\n\tfont-size: 15px;\r\n\tfont-weight: 300;\r\n\tline-height: 1.3;\r\n\tmargin-top: 0;\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.quote {\r\n\tborder: none;\r\n\tmargin: 20px 0 60px 0;\r\n}\r\n\r\n.quote p {\r\n\tfont-style: italic;\r\n}\r\n\r\n.quote p:before {\r\n\tcontent: '\\201C';\r\n\tfont-size: 50px;\r\n\topacity: .15;\r\n\tposition: absolute;\r\n\ttop: -20px;\r\n\tleft: 3px;\r\n}\r\n\r\n.quote p:after {\r\n\tcontent: '\\201D';\r\n\tfont-size: 50px;\r\n\topacity: .15;\r\n\tposition: absolute;\r\n\tbottom: -42px;\r\n\tright: 3px;\r\n}\r\n\r\n.quote footer {\r\n\tposition: absolute;\r\n\tbottom: -40px;\r\n\tright: 0;\r\n}\r\n\r\n.quote footer img {\r\n\tborder-radius: 3px;\r\n}\r\n\r\n.quote footer a {\r\n\tmargin-left: 5px;\r\n\tvertical-align: middle;\r\n}\r\n\r\n.speech-bubble {\r\n\tposition: relative;\r\n\tpadding: 10px;\r\n\tbackground: rgba(0, 0, 0, .04);\r\n\tborder-radius: 5px;\r\n}\r\n\r\n.speech-bubble:after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\ttop: 100%;\r\n\tright: 30px;\r\n\tborder: 13px solid transparent;\r\n\tborder-top-color: rgba(0, 0, 0, .04);\r\n}\r\n\r\n.learn-bar > .learn {\r\n\tposition: absolute;\r\n\twidth: 272px;\r\n\ttop: 8px;\r\n\tleft: -300px;\r\n\tpadding: 10px;\r\n\tborder-radius: 5px;\r\n\tbackground-color: rgba(255, 255, 255, .6);\r\n\t-webkit-transition-property: left;\r\n\ttransition-property: left;\r\n\t-webkit-transition-duration: 500ms;\r\n\ttransition-duration: 500ms;\r\n}\r\n\r\n@media (min-width: 899px) {\r\n\t.learn-bar {\r\n\t\twidth: auto;\r\n\t\tmargin: 0 0 0 300px;\r\n\t}\r\n\r\n\t.learn-bar > .learn {\r\n\t\tleft: 8px;\r\n\t}\r\n\r\n\t.learn-bar #todoapp {\r\n\t\twidth: 550px;\r\n\t\tmargin: 130px auto 40px auto;\r\n\t}\r\n}\r\n", ""]);
+	exports.push([module.id, "html,\r\nbody {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n}\r\n\r\nbutton {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tborder: 0;\r\n\tbackground: none;\r\n\tfont-size: 100%;\r\n\tvertical-align: baseline;\r\n\tfont-family: inherit;\r\n\tcolor: inherit;\r\n\t-webkit-appearance: none;\r\n\t-ms-appearance: none;\r\n\t-o-appearance: none;\r\n\tappearance: none;\r\n}\r\n\r\nbody {\r\n\tfont: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n\tline-height: 1.4em;\r\n\tbackground: #eaeaea url(" + __webpack_require__(30) + ");\r\n\tcolor: #4d4d4d;\r\n\twidth: 550px;\r\n\tmargin: 0 auto;\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-font-smoothing: antialiased;\r\n\t-ms-font-smoothing: antialiased;\r\n\t-o-font-smoothing: antialiased;\r\n\tfont-smoothing: antialiased;\r\n}\r\n\r\nbutton,\r\ninput[type=\"checkbox\"] {\r\n  outline: none;\r\n}\r\n\r\n#todoapp {\r\n\tbackground: #fff;\r\n\tbackground: rgba(255, 255, 255, 0.9);\r\n\tmargin: 130px 0 40px 0;\r\n\tborder: 1px solid #ccc;\r\n\tposition: relative;\r\n\tborder-top-left-radius: 2px;\r\n\tborder-top-right-radius: 2px;\r\n\tbox-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),\r\n\t\t\t\t0 25px 50px 0 rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n#todoapp:before {\r\n\tcontent: '';\r\n\tborder-left: 1px solid #f5d6d6;\r\n\tborder-right: 1px solid #f5d6d6;\r\n\twidth: 2px;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 40px;\r\n\theight: 100%;\r\n}\r\n\r\n#todoapp input::-webkit-input-placeholder {\r\n\tfont-style: italic;\r\n}\r\n\r\n#todoapp input::-moz-placeholder {\r\n\tfont-style: italic;\r\n\tcolor: #a9a9a9;\r\n}\r\n\r\n#todoapp h1 {\r\n\tposition: absolute;\r\n\ttop: -120px;\r\n\twidth: 100%;\r\n\tfont-size: 70px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tcolor: #b3b3b3;\r\n\tcolor: rgba(255, 255, 255, 0.3);\r\n\ttext-shadow: -1px -1px rgba(0, 0, 0, 0.2);\r\n\t-webkit-text-rendering: optimizeLegibility;\r\n\t-moz-text-rendering: optimizeLegibility;\r\n\t-ms-text-rendering: optimizeLegibility;\r\n\t-o-text-rendering: optimizeLegibility;\r\n\ttext-rendering: optimizeLegibility;\r\n}\r\n\r\n#header {\r\n\tpadding-top: 15px;\r\n\tborder-radius: inherit;\r\n}\r\n\r\n#header:before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tright: 0;\r\n\tleft: 0;\r\n\theight: 15px;\r\n\tz-index: 2;\r\n\tborder-bottom: 1px solid #6c615c;\r\n\tbackground: #8d7d77;\r\n\tbackground: -webkit-gradient(linear, left top, left bottom, from(rgba(132, 110, 100, 0.8)),to(rgba(101, 84, 76, 0.8)));\r\n\tbackground: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));\r\n\tbackground: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));\r\n\tfilter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');\r\n\tborder-top-left-radius: 1px;\r\n\tborder-top-right-radius: 1px;\r\n}\r\n\r\n#new-todo,\r\n.edit {\r\n\tposition: relative;\r\n\tmargin: 0;\r\n\twidth: 100%;\r\n\tfont-size: 24px;\r\n\tfont-family: inherit;\r\n\tline-height: 1.4em;\r\n\tborder: 0;\r\n\toutline: none;\r\n\tcolor: inherit;\r\n\tpadding: 6px;\r\n\tborder: 1px solid #999;\r\n\tbox-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);\r\n\t-moz-box-sizing: border-box;\r\n\t-ms-box-sizing: border-box;\r\n\t-o-box-sizing: border-box;\r\n\tbox-sizing: border-box;\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-font-smoothing: antialiased;\r\n\t-ms-font-smoothing: antialiased;\r\n\t-o-font-smoothing: antialiased;\r\n\tfont-smoothing: antialiased;\r\n}\r\n\r\n#new-todo {\r\n\tpadding: 16px 16px 16px 60px;\r\n\tborder: none;\r\n\tbackground: rgba(0, 0, 0, 0.02);\r\n\tz-index: 2;\r\n\tbox-shadow: none;\r\n}\r\n\r\n#main {\r\n\tposition: relative;\r\n\tz-index: 2;\r\n\tborder-top: 1px dotted #adadad;\r\n}\r\n\r\nlabel[for='toggle-all'] {\r\n\tdisplay: none;\r\n}\r\n\r\n#toggle-all {\r\n\tposition: absolute;\r\n\ttop: -42px;\r\n\tleft: -4px;\r\n\twidth: 40px;\r\n\ttext-align: center;\r\n\t/* Mobile Safari */\r\n\tborder: none;\r\n}\r\n\r\n#toggle-all:before {\r\n\tcontent: '\\BB';\r\n\tfont-size: 28px;\r\n\tcolor: #d9d9d9;\r\n\tpadding: 0 25px 7px;\r\n}\r\n\r\n#toggle-all:checked:before {\r\n\tcolor: #737373;\r\n}\r\n\r\n#todo-list {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n}\r\n\r\n#todo-list li {\r\n\tposition: relative;\r\n\tfont-size: 24px;\r\n\tborder-bottom: 1px dotted #ccc;\r\n}\r\n\r\n#todo-list li:last-child {\r\n\tborder-bottom: none;\r\n}\r\n\r\n#todo-list li.editing {\r\n\tborder-bottom: none;\r\n\tpadding: 0;\r\n}\r\n\r\n#todo-list li.editing .edit {\r\n\tdisplay: block;\r\n\twidth: 506px;\r\n\tpadding: 13px 17px 12px 17px;\r\n\tmargin: 0 0 0 43px;\r\n}\r\n\r\n#todo-list li.editing .view {\r\n\tdisplay: none;\r\n}\r\n\r\n#todo-list li .toggle {\r\n\ttext-align: center;\r\n\twidth: 40px;\r\n\t/* auto, since non-WebKit browsers doesn't support input styling */\r\n\theight: auto;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\tmargin: auto 0;\r\n\t/* Mobile Safari */\r\n\tborder: none;\r\n\t-webkit-appearance: none;\r\n\t-ms-appearance: none;\r\n\t-o-appearance: none;\r\n\tappearance: none;\r\n}\r\n\r\n#todo-list li .toggle:after {\r\n\tcontent: '\\2714';\r\n\t/* 40 + a couple of pixels visual adjustment */\r\n\tline-height: 43px;\r\n\tfont-size: 20px;\r\n\tcolor: #d9d9d9;\r\n\ttext-shadow: 0 -1px 0 #bfbfbf;\r\n}\r\n\r\n#todo-list li .toggle:checked:after {\r\n\tcolor: #85ada7;\r\n\ttext-shadow: 0 1px 0 #669991;\r\n\tbottom: 1px;\r\n\tposition: relative;\r\n}\r\n\r\n#todo-list li label {\r\n\twhite-space: pre;\r\n\tword-break: break-word;\r\n\tpadding: 15px 60px 15px 15px;\r\n\tmargin-left: 45px;\r\n\tdisplay: block;\r\n\tline-height: 1.2;\r\n\t-webkit-transition: color 0.4s;\r\n\ttransition: color 0.4s;\r\n}\r\n\r\n#todo-list li.completed label {\r\n\tcolor: #a9a9a9;\r\n\ttext-decoration: line-through;\r\n}\r\n\r\n#todo-list li .destroy {\r\n\tdisplay: none;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tright: 10px;\r\n\tbottom: 0;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: auto 0;\r\n\tfont-size: 22px;\r\n\tcolor: #a88a8a;\r\n\t-webkit-transition: all 0.2s;\r\n\ttransition: all 0.2s;\r\n}\r\n\r\n#todo-list li .destroy:hover {\r\n\ttext-shadow: 0 0 1px #000,\r\n\t\t\t\t 0 0 10px rgba(199, 107, 107, 0.8);\r\n\t-webkit-transform: scale(1.3);\r\n\t-ms-transform: scale(1.3);\r\n\ttransform: scale(1.3);\r\n}\r\n\r\n#todo-list li .destroy:after {\r\n\tcontent: '\\2716';\r\n}\r\n\r\n#todo-list li:hover .destroy {\r\n\tdisplay: block;\r\n}\r\n\r\n#todo-list li .edit {\r\n\tdisplay: none;\r\n}\r\n\r\n#todo-list li.editing:last-child {\r\n\tmargin-bottom: -1px;\r\n}\r\n\r\n#footer {\r\n\tcolor: #777;\r\n\tpadding: 0 15px;\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tbottom: -31px;\r\n\tleft: 0;\r\n\theight: 20px;\r\n\tz-index: 1;\r\n\ttext-align: center;\r\n}\r\n\r\n#footer:before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tbottom: 31px;\r\n\tleft: 0;\r\n\theight: 50px;\r\n\tz-index: -1;\r\n\tbox-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),\r\n\t\t\t\t0 6px 0 -3px rgba(255, 255, 255, 0.8),\r\n\t\t\t\t0 7px 1px -3px rgba(0, 0, 0, 0.3),\r\n\t\t\t\t0 43px 0 -6px rgba(255, 255, 255, 0.8),\r\n\t\t\t\t0 44px 2px -6px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n#todo-count {\r\n\tfloat: left;\r\n\ttext-align: left;\r\n}\r\n\r\n#filters {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tlist-style: none;\r\n\tposition: absolute;\r\n\tright: 0;\r\n\tleft: 0;\r\n}\r\n\r\n#filters li {\r\n\tdisplay: inline;\r\n}\r\n\r\n#filters li a {\r\n\tcolor: #83756f;\r\n\tmargin: 2px;\r\n\ttext-decoration: none;\r\n}\r\n\r\n#filters li a.selected {\r\n\tfont-weight: bold;\r\n}\r\n\r\n#clear-completed {\r\n\tfloat: right;\r\n\tposition: relative;\r\n\tline-height: 20px;\r\n\ttext-decoration: none;\r\n\tbackground: rgba(0, 0, 0, 0.1);\r\n\tfont-size: 11px;\r\n\tpadding: 0 10px;\r\n\tborder-radius: 3px;\r\n\tbox-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n#clear-completed:hover {\r\n\tbackground: rgba(0, 0, 0, 0.15);\r\n\tbox-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n#info {\r\n\tmargin: 65px auto 0;\r\n\tcolor: #a6a6a6;\r\n\tfont-size: 12px;\r\n\ttext-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);\r\n\ttext-align: center;\r\n}\r\n\r\n#info a {\r\n\tcolor: inherit;\r\n}\r\n\r\n/*\r\n\tHack to remove background from Mobile Safari.\r\n\tCan't use it globally since it destroys checkboxes in Firefox and Opera\r\n*/\r\n\r\n@media screen and (-webkit-min-device-pixel-ratio:0) {\r\n\t#toggle-all,\r\n\t#todo-list li .toggle {\r\n\t\tbackground: none;\r\n\t}\r\n\r\n\t#todo-list li .toggle {\r\n\t\theight: 40px;\r\n\t}\r\n\r\n\t#toggle-all {\r\n\t\ttop: -56px;\r\n\t\tleft: -15px;\r\n\t\twidth: 65px;\r\n\t\theight: 41px;\r\n\t\t-webkit-transform: rotate(90deg);\r\n\t\t-ms-transform: rotate(90deg);\r\n\t\ttransform: rotate(90deg);\r\n\t\t-webkit-appearance: none;\r\n\t\tappearance: none;\r\n\t}\r\n}\r\n\r\n.hidden {\r\n\tdisplay: none;\r\n}\r\n\r\nhr {\r\n\tmargin: 20px 0;\r\n\tborder: 0;\r\n\tborder-top: 1px dashed #C5C5C5;\r\n\tborder-bottom: 1px dashed #F7F7F7;\r\n}\r\n\r\n.learn a {\r\n\tfont-weight: normal;\r\n\ttext-decoration: none;\r\n\tcolor: #b83f45;\r\n}\r\n\r\n.learn a:hover {\r\n\ttext-decoration: underline;\r\n\tcolor: #787e7e;\r\n}\r\n\r\n.learn h3,\r\n.learn h4,\r\n.learn h5 {\r\n\tmargin: 10px 0;\r\n\tfont-weight: 500;\r\n\tline-height: 1.2;\r\n\tcolor: #000;\r\n}\r\n\r\n.learn h3 {\r\n\tfont-size: 24px;\r\n}\r\n\r\n.learn h4 {\r\n\tfont-size: 18px;\r\n}\r\n\r\n.learn h5 {\r\n\tmargin-bottom: 0;\r\n\tfont-size: 14px;\r\n}\r\n\r\n.learn ul {\r\n\tpadding: 0;\r\n\tmargin: 0 0 30px 25px;\r\n}\r\n\r\n.learn li {\r\n\tline-height: 20px;\r\n}\r\n\r\n.learn p {\r\n\tfont-size: 15px;\r\n\tfont-weight: 300;\r\n\tline-height: 1.3;\r\n\tmargin-top: 0;\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.quote {\r\n\tborder: none;\r\n\tmargin: 20px 0 60px 0;\r\n}\r\n\r\n.quote p {\r\n\tfont-style: italic;\r\n}\r\n\r\n.quote p:before {\r\n\tcontent: '\\201C';\r\n\tfont-size: 50px;\r\n\topacity: .15;\r\n\tposition: absolute;\r\n\ttop: -20px;\r\n\tleft: 3px;\r\n}\r\n\r\n.quote p:after {\r\n\tcontent: '\\201D';\r\n\tfont-size: 50px;\r\n\topacity: .15;\r\n\tposition: absolute;\r\n\tbottom: -42px;\r\n\tright: 3px;\r\n}\r\n\r\n.quote footer {\r\n\tposition: absolute;\r\n\tbottom: -40px;\r\n\tright: 0;\r\n}\r\n\r\n.quote footer img {\r\n\tborder-radius: 3px;\r\n}\r\n\r\n.quote footer a {\r\n\tmargin-left: 5px;\r\n\tvertical-align: middle;\r\n}\r\n\r\n.speech-bubble {\r\n\tposition: relative;\r\n\tpadding: 10px;\r\n\tbackground: rgba(0, 0, 0, .04);\r\n\tborder-radius: 5px;\r\n}\r\n\r\n.speech-bubble:after {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\ttop: 100%;\r\n\tright: 30px;\r\n\tborder: 13px solid transparent;\r\n\tborder-top-color: rgba(0, 0, 0, .04);\r\n}\r\n\r\n.learn-bar > .learn {\r\n\tposition: absolute;\r\n\twidth: 272px;\r\n\ttop: 8px;\r\n\tleft: -300px;\r\n\tpadding: 10px;\r\n\tborder-radius: 5px;\r\n\tbackground-color: rgba(255, 255, 255, .6);\r\n\t-webkit-transition-property: left;\r\n\ttransition-property: left;\r\n\t-webkit-transition-duration: 500ms;\r\n\ttransition-duration: 500ms;\r\n}\r\n\r\n@media (min-width: 899px) {\r\n\t.learn-bar {\r\n\t\twidth: auto;\r\n\t\tmargin: 0 0 0 300px;\r\n\t}\r\n\r\n\t.learn-bar > .learn {\r\n\t\tleft: 8px;\r\n\t}\r\n\r\n\t.learn-bar #todoapp {\r\n\t\twidth: 550px;\r\n\t\tmargin: 130px auto 40px auto;\r\n\t}\r\n}\r\n", ""]);
 
 	// exports
 
 
 /***/ },
-
-/***/ 181:
+/* 29 */
 /***/ function(module, exports) {
 
 	/*
@@ -1350,15 +1543,13 @@ webpackJsonp([0],{
 	};
 
 /***/ },
-
-/***/ 182:
+/* 30 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,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"
 
 /***/ },
-
-/***/ 183:
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -1583,17 +1774,16 @@ webpackJsonp([0],{
 
 
 /***/ },
-
-/***/ 184:
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(185);
+	var content = __webpack_require__(33);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(183)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1610,11 +1800,10 @@ webpackJsonp([0],{
 	}
 
 /***/ },
-
-/***/ 185:
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(181)();
+	exports = module.exports = __webpack_require__(29)();
 	// imports
 
 
@@ -1625,5 +1814,4 @@ webpackJsonp([0],{
 
 
 /***/ }
-
-});
+]);

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Titus Jin",
   "description": "Example dev environment",
-  "repository": "",
+  "repository": "https://github.com/titusjin/dream_react.git",
   "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.1",
